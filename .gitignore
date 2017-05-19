@@ -7,3 +7,8 @@ yarn-error.log*
 test/unit/coverage
 test/e2e/reports
 selenium-debug.log
+/localhost_2017-05-19_15-09-01.report.html
+/localhost_2017-05-19_15-10-41.report.html
+.idea/
+localhost_2017-05-19_15-09-01.report.html
+localhost_2017-05-19_15-10-41.report.html
