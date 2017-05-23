@@ -1,0 +1,53 @@
+// Theme overrides
+
+::selection, ::-moz-selection {
+  background-color: @color-primary;
+  color: @color-white;
+}
+
+.page-sidebar button {
+  color: #FFF;
+  &:hover {
+    color: #69B6F3;
+  }
+}
+
+.page-sidebar {
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  .menu-items li {
+    &:hover, &.open, &.active {
+      & > .bg-primary.icon-thumbnail {
+        color: @color-menu-link-hover;
+        background-color: @color-success-lighter;
+      }
+    }
+  }
+}
+
+.page-sidebar .sidebar-menu .outer-tab-nav-section {
+  background-color: @color-primary !important;
+}
+
+.login-wrapper {
+  height: 100%;
+  background-color: @color-primary;
+  & > * {
+    height: 100%;
+  }
+  .bg-pic {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    & > img {
+      height: 100%;
+      opacity: 1.0;
+    }
+  }
+}
+
+.header .brand {
+  width: 250px;
+  img {
+    max-height: 55px;
+  }
+}
