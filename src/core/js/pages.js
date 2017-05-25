@@ -466,6 +466,7 @@
    * @description Inintialize all core components.
    */
   Pages.prototype.init = function () {
+    consoel.log('Pages init');
     // init layout
     this.initSidebar()
     this.initDropDown()
@@ -1906,7 +1907,8 @@
       
       if ($('.sidebar-overlay-slide').hasClass('show')) {
         $('.sidebar-overlay-slide').removeClass('show')
-        $('[data-pages-toggle\']').removeClass('active')
+        //language=JQuery-CSS
+        $("[data-pages-toggle]").removeClass('active')
         
       }
       
@@ -2173,17 +2175,15 @@
     $.fn.search = old
     return this
   }
-  
   $(document).on('click.pg.search.data-api', '[data-toggle="search"]', function (e) {
     var $this = $(this)
     var $target = $('[data-pages="search"]')
     if ($this.is('a')) e.preventDefault()
     $target.data('pg.search').toggleOverlay('show')
   })
-  
 })(window.jQuery);
 (function ($) {
-  'use strict';
+  'use strict'
   // Initialize layouts and plugins
-  (typeof angular === 'undefined') && $.Pages.init()
+  // (typeof angular === 'undefined') && $.Pages.init()
 })(window.jQuery)

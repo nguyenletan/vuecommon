@@ -2,4 +2,5 @@ build/*.js
 config/*.js
 src/assets/**/*.*,
 plugins/**/*.*
+src/core/**/*.*
 node_modules/**/*/*

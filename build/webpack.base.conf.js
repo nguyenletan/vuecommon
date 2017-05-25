@@ -1,3 +1,5 @@
+var webpack = require('webpack')
+var LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 var path = require('path')
 var utils = require('./utils')
 var config = require('../config')
@@ -40,12 +42,12 @@ module.exports = {
       './src/assets/less/style.less',
       './src/assets/less/custom.less'
     ],
-    plugins: [
-      './node_modules/jquery/dist/jquery.min.js',
-      './plugins/modernizr.custom.js',
-      './node_modules/lodash/lodash.js',
+    pluginsjs: [
+      'jquery/dist/jquery.js',
       './plugins/pace/pace.js',
-      './node_modules/bootstrap/dist/js/bootstrap.min.js',
+      
+      'moment/moment.js',
+      'bootstrap/dist/js/bootstrap.min.js',
       './plugins/jquery-ui/jquery-ui.min.js',
       './plugins/jquery/jquery-easy.js',
       './plugins/jquery-unveil/jquery.unveil.min.js',
@@ -67,7 +69,7 @@ module.exports = {
       './plugins/mapplic/js/hammer.js',
       './plugins/mapplic/js/jquery.mousewheel.js',
       './plugins/mapplic/js/mapplic.js',
-      './plugins/rickshaw/rickshaw.min.js',
+      /*  './plugins/rickshaw/rickshaw.min.js',*/
       './plugins/jquery-metrojs/MetroJs.min.js',
       './plugins/jquery-sparkline/jquery.sparkline.min.js',
       './plugins/skycons/skycons.js',
@@ -77,27 +79,25 @@ module.exports = {
       './plugins/dropzone/dropzone.min.js',
       './plugins/bootstrap-tag/bootstrap-tagsinput.js',
       './plugins/jquery-inputmask/jquery.inputmask.min.js',
-      './plugins/moment/moment.min.js',
+      
       './plugins/boostrap-form-wizard/js/jquery.bootstrap.wizard.min.js',
       './plugins/bootstrap-timepicker/bootstrap-timepicker.min.js',
       './plugins/jquery-datatable/media/js/jquery.dataTables.min.js',
-      './plugins/jquery-datatable/media/js/dataTables.bootstrap.min.js',
+      './plugins/jquery-datatable/media/js/dataTables.bootstrap.js',
       './plugins/jquery-datatable/extensions/Bootstrap/jquery-datatable-bootstrap.js',
-      './plugins/jquery-datatable/extensions/TableTools/js/dataTables.tableTools.min.js',
+      './plugins/jquery-datatable/extensions/TableTools/js/dataTables.tableTools.js',
       './plugins/datatables-responsive/js/datatables.responsive.js',
       './plugins/jquery-dynatree/jquery.dynatree.min.js',
       './plugins/ion-slider/js/ion.rangeSlider.min.js',
       './plugins/jquery-nouislider/jquery.nouislider.min.js',
       './plugins/jquery-nouislider/jquery.liblink.js',
       './plugins/imagesloaded/imagesloaded.pkgd.min.js',
-      './plugins/jquery-isotope/isotope.pkgd.min.js',
+      'isotope-layout/dist/isotope.pkgd.js',
       './plugins/codrops-dialogFx/dialogFx.js',
       './plugins/interactjs/interact.min.js',
-      './plugins/moment/moment-with-locales.min.js',
-      './plugins/snap-svg/snap.svg.min.js'
+      './plugins/snap-svg/snap.svg.js'
     ],
-    pages: [
-      './src/core/js/pages.calendar.js',
+    pagesjs: [
       './src/core/js/pages.js'
     ]
   },
@@ -112,19 +112,14 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
+      'jquery': 'jquery/dist/jquery.js',
+      'datatables': resolve('plugins/jquery-datatable/media/js/jquery.dataTables.min.js'),
       '@': resolve('src')
     }
+    
   },
   module: {
-    noParse: [
-      /moment.min.js/,
-      /moment-with-locales.min.js/,
-      /daterangepicker.js/,
-      /dataTables.bootstrap.min.js/,
-      /dataTables.tableTools.min.js/,
-      /rickshaw.min.js/,
-      /pages.calendar.js/,
-      /pages.js/],
+    
     rules: [
       /* {
        test: /\.(js|vue)$/,
@@ -145,6 +140,9 @@ module.exports = {
         test: /\.js$/,
         exclude: [/\/node_modules\//, /\/plugins\//, '/\/scripts\//'],
         loader: 'babel-loader',
+        options: {
+          plugins: ['lodash']
+        },
         include: [resolve('src'), resolve('test')]
       },
       {
@@ -165,5 +163,14 @@ module.exports = {
         
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jquery: 'jquery',
+      'window.jQuery': 'jquery',
+      jQuery: 'jquery'
+    }),
+    new LodashModuleReplacementPlugin
+  ]
 }

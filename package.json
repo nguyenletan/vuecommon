@@ -15,12 +15,18 @@
     "lint": "eslint --ext src/**/*.vue src/**/*.js test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "bootstrap": "latest",
+    "es6-promise": "latest",
+    "font-awesome": "latest",
+    "isotope-layout": "^3.0.4",
+    "jquery": "latest",
+    "lodash": "latest",
+    "modernizr": "^3.5.0",
+    "moment": "latest",
+    "snapsvg": "^0.5.1",
     "vue": "latest",
     "vue-router": "latest",
-    "bootstrap": "latest",
-    "font-awesome": "latest",
-    "jquery": "latest",
-    "lodash": "latest"
+    "vuex": "latest"
   },
   "devDependencies": {
     "autoprefixer": "latest",
@@ -28,6 +34,7 @@
     "babel-eslint": "latest",
     "babel-loader": "latest",
     "babel-plugin-istanbul": "latest",
+    "babel-plugin-lodash": "latest",
     "babel-plugin-transform-runtime": "latest",
     "babel-plugin-undeclared-variables-check": "latest",
     "babel-preset-env": "latest",
@@ -69,6 +76,7 @@
     "karma-webpack": "latest",
     "less": "latest",
     "less-loader": "latest",
+    "lodash-webpack-plugin": "latest",
     "lolex": "latest",
     "mocha": "latest",
     "nightwatch": "latest",
@@ -84,7 +92,7 @@
     "shelljs": "latest",
     "sinon": "latest",
     "sinon-chai": "latest",
-    "style-loader": "lastest",
+    "style-loader": "latest",
     "url-loader": "latest",
     "vue-loader": "latest",
     "vue-style-loader": "latest",

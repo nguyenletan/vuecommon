@@ -9,11 +9,12 @@
     "stage-2"
   ],
   "plugins": [
-    "transform-runtime",
-    "undeclared-variables-check"
+    "transform-runtime"
+
 
   ],
   "ignore": [
+    "node_modules/**/*.*",
     "scripts*.js",
     "plugins/**/*.js",
     "src/core/**/*.js"
