@@ -14,10 +14,7 @@
 
   ],
   "ignore": [
-    "node_modules/**/*.*",
-    "scripts*.js",
-    "plugins/**/*.js",
-    "src/core/**/*.js"
+
   ],
   "comments": false,
   "env": {

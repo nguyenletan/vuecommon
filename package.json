@@ -18,12 +18,12 @@
     "bootstrap": "latest",
     "es6-promise": "latest",
     "font-awesome": "latest",
-    "isotope-layout": "^3.0.4",
+    "isotope-layout": "lasted",
     "jquery": "latest",
     "lodash": "latest",
-    "modernizr": "^3.5.0",
+    "modernizr": "lasted",
     "moment": "latest",
-    "snapsvg": "^0.5.1",
+    "snapsvg": "lasted",
     "vue": "latest",
     "vue-router": "latest",
     "vuex": "latest"
@@ -64,6 +64,7 @@
     "friendly-errors-webpack-plugin": "latest",
     "html-webpack-plugin": "latest",
     "http-proxy-middleware": "latest",
+    "import-loader": "lasted",
     "inject-loader": "latest",
     "karma": "latest",
     "karma-coverage": "latest",
@@ -101,7 +102,8 @@
     "webpack-bundle-analyzer": "latest",
     "webpack-dev-middleware": "latest",
     "webpack-hot-middleware": "latest",
-    "webpack-merge": "latest"
+    "webpack-merge": "latest",
+    "webpack-modernizr-loader": "lasted"
   },
   "engines": {
     "node": ">= 7.0.0",

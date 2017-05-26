@@ -1,4 +1,4 @@
-
+//Pages Calendar - Version 2.1.4
 
 (function($) {
     var PagesCalendar = function(element, options) {

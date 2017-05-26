@@ -18,7 +18,7 @@
             <div class="pull-center hidden-md hidden-lg">
                 <div class="header-inner">
                     <div class="brand inline">
-                        <img src="../assets/img/logo.png" alt="logo">
+                        <img src="../../assets/img/logo.png" alt="logo">
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@
         <div class=" pull-left sm-table hidden-xs hidden-sm">
             <div class="header-inner">
                 <div class="brand inline">
-                    <img src="../assets/img/logo.png" alt="logo">
+                    <img src="../../assets/img/logo.png" alt="logo">
                 </div>
 
                 <a href="javascript:void(0);" class="search-link" data-toggle="search"><i class="pg-search"></i>Type anywhere to

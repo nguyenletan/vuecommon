@@ -6,14 +6,14 @@ import App from './App'
 import router from './router'
 
 Vue.config.productionTip = true
-Vue.config.performance = true
+// Vue.config.performance = true
 
 // eslint-disable-next-line handle-callback-err
-Vue.config.errorHandler = (err, vm, info) => {
-  // handle error
-  // `info` is a Vue-specific error info, e.g. which lifecycle hook
-  // the error was found in. Only available in 2.2.0+
-}
+/* Vue.config.errorHandler = (err, vm, info) => {
+ // handle error
+ // `info` is a Vue-specific error info, e.g. which lifecycle hook
+ // the error was found in. Only available in 2.2.0+
+ } */
 
 /* eslint-disable no-new */
 new Vue({
